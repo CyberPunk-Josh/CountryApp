@@ -11,7 +11,6 @@ export const CountryInfo = ({country}) => {
         region,
         subregion,
         area,
-        map,
         population,
         continent,
         flag
@@ -28,7 +27,20 @@ export const CountryInfo = ({country}) => {
         {
             data ? 
             (
-                <img src={flag} alt={name} />
+                <div className="mb-5 px-5 row align-items-center justify-content-center">
+                    <div className="col-md-6">
+                        <p>Official Name: {name}</p>
+                        <p>Capital: {capital}</p>
+                        <p>Region: {region}</p>
+                        <p>Subregion: {subregion}</p>
+                        <p>Area: {area}</p>
+                        <p>Population: {population}</p>
+                        <p>Continent: {continent}</p>
+                    </div>
+                    <div className="col-md-6 text-center">
+                        <img src={flag} alt={name} style={{ width: '20rem', height: 'auto', border: '1px solid black'}}/>
+                    </div>
+                </div>
             )
             :
             <p>Start Searching a Country</p>

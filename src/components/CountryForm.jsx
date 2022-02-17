@@ -44,7 +44,6 @@ export const CountryForm = () => {
           region: info[0].region,
           subregion: info[0].subregion,
           area: info[0].area,
-          map: info[0].maps.googleMaps,
           population: info[0].population,
           continent: info[0].continents[0],
           flag: info[0].flags[0]
