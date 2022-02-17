@@ -1,0 +1,14 @@
+.hero{
+    background-image: url(../src/img/background_image.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:35vh;
+}
+
+.nav-hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
