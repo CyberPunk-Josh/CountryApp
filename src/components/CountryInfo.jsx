@@ -11,9 +11,11 @@ export const CountryInfo = ({country}) => {
         region,
         subregion,
         area,
+        map,
         population,
         continent,
-        flag
+        flag,
+        language
     } = country;
 
     useEffect(() => {
@@ -28,17 +30,39 @@ export const CountryInfo = ({country}) => {
             data ? 
             (
                 <div className="mb-5 px-5 row align-items-center justify-content-center">
-                    <div className="col-md-6">
-                        <p>Official Name: {name}</p>
-                        <p>Capital: {capital}</p>
-                        <p>Region: {region}</p>
-                        <p>Subregion: {subregion}</p>
-                        <p>Area: {area}</p>
-                        <p>Population: {population}</p>
-                        <p>Continent: {continent}</p>
+                    <div className="col-md-6 row align-items-center justify-content-center">
+                        <div className="col-md-6 mb-3">
+                            <h6 className="font-weight-bold">Official Name:</h6>
+                            <p>{name}</p>
+                            <h6 className="font-weight-bold">Capital:</h6>
+                            <p>{capital}</p>
+                        </div>
+                        <div className="col-md-6 mb-3">
+                            <h6 className="font-weight-bold">Region: </h6>
+                            <p>{region}</p>
+                            <h6 className="font-weight-bold">Subregion: </h6>
+                            <p>{subregion}</p>
+                        </div>
+                        <div className="col-md-6 mb-3">
+                            <h6 className="font-weight-bold">Area: </h6>
+                            <p>{area}</p>
+                            <h6 className="font-weight-bold">Population: </h6>
+                            <p>{population}</p>
+                        </div>
+                        <div className="col-md-6 mb-3">
+                            <h6 className="font-weight-bold">Continent: </h6>
+                            <p>{continent}</p>
+                            <h6 className="font-weight-bold">Language: </h6>
+                            <p>{language}</p>
+                        </div>
                     </div>
-                    <div className="col-md-6 text-center">
-                        <img src={flag} alt={name} style={{ width: '20rem', height: 'auto', border: '1px solid black'}}/>
+                    <div className="col-md-6 row align-items-center justify-content-center">
+                        <div className='col'>
+                            <img src={flag} alt={name} style={{ width: '30rem', height: 'auto', border: '1px solid black'}}/>
+                        </div>
+                        <div className='col text-center mt-3'>
+                            <a href={map} className='btn btn-primary text-white'>More Info</a>
+                        </div>
                     </div>
                 </div>
             )
